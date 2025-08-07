@@ -5,144 +5,253 @@ import { Check, Star } from "lucide-react";
 
 const plans = [
   {
-    name: "ベーシックプラン",
-    subtitle: "半日撮影",
-    price: "50,000円〜",
-    duration: "4時間",
-    shots: "20-30カット",
+    name: "Starter",
+    subtitle: "スタートアップ向け",
+    price: "¥98,000",
+    originalPrice: "¥150,000",
+    duration: "半日撮影",
+    shots: "30-50カット",
     features: [
-      "撮影時間: 4時間",
-      "納品カット数: 20-30カット",
-      "基本的な商品撮影",
-      "3営業日以内納品"
+      "プロフォトグラファー",
+      "4K高解像度撮影",
+      "基本レタッチ込み",
+      "商用利用可能",
+      "48時間以内納品"
     ],
-    recommended: "少量の新作商品撮影、SNS用コンテンツ",
-    popular: false
+    extras: [
+      "スタジオ使用料込み",
+      "基本小道具提供"
+    ],
+    recommended: "新規ブランド、少量商品撮影",
+    popular: false,
+    discount: "35%",
+    color: "studio-charcoal"
   },
   {
-    name: "スタンダードプラン",
-    subtitle: "1日撮影",
-    price: "100,000円〜",
-    duration: "8時間",
-    shots: "50-80カット",
-    features: [
-      "撮影時間: 8時間",
-      "納品カット数: 50-80カット",
-      "モデル撮影込み",
-      "複数アングル対応",
-      "3営業日以内納品"
-    ],
-    recommended: "シーズンコレクション、EC用商品撮影",
-    popular: true
-  },
-  {
-    name: "プレミアムプラン",
-    subtitle: "1日撮影＋企画",
-    price: "150,000円〜",
-    duration: "8時間",
+    name: "Professional",
+    subtitle: "プロフェッショナル向け",
+    price: "¥198,000",
+    originalPrice: "¥280,000",
+    duration: "1日集中撮影",
     shots: "80-120カット",
     features: [
-      "撮影時間: 8時間",
-      "納品カット数: 80-120カット",
-      "企画提案込み",
-      "複数モデル対応",
-      "ルックブック制作",
-      "当日納品対応可能"
+      "専属フォトグラファー",
+      "4K+RAW撮影",
+      "プロレタッチ",
+      "モデル手配可能",
+      "24時間以内納品",
+      "撮影ディレクション"
     ],
-    recommended: "ルックブック制作、ブランドイメージ撮影",
-    popular: false
+    extras: [
+      "プレミアムスタジオ",
+      "プロ照明機材",
+      "スタイリスト対応"
+    ],
+    recommended: "本格的なブランド撮影、カタログ制作",
+    popular: true,
+    discount: "29%",
+    color: "studio-accent"
+  },
+  {
+    name: "Enterprise",
+    subtitle: "大規模ブランド向け",
+    price: "¥398,000",
+    originalPrice: "¥550,000",
+    duration: "2日間撮影",
+    shots: "200+カット",
+    features: [
+      "撮影チーム専属",
+      "8K撮影対応",
+      "高度レタッチ",
+      "複数モデル対応",
+      "ライブ編集",
+      "当日データ納品",
+      "動画撮影込み"
+    ],
+    extras: [
+      "最高級スタジオ",
+      "全機材フル装備",
+      "専属チーム",
+      "コンセプト企画"
+    ],
+    recommended: "大型キャンペーン、年間契約ブランド",
+    popular: false,
+    discount: "28%",
+    color: "studio-charcoal"
   }
 ];
 
 export const PricingSection = () => {
   return (
-    <section className="py-20 bg-gradient-section">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            選べる3つの撮影プラン
+    <section className="py-32 bg-background relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-studio-accent/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/3 w-[400px] h-[400px] bg-studio-charcoal/5 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20 animate-fade-in">
+          <div className="inline-block px-6 py-2 bg-studio-accent/10 text-studio-accent rounded-full text-sm font-medium tracking-wide mb-6">
+            PRICING PLANS
+          </div>
+          <h2 className="text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight">
+            プロフェッショナル
+            <span className="block text-studio-accent">撮影パッケージ</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            あなたのブランドのニーズに合わせて最適なプランをお選びください
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+            あらゆる規模とニーズに対応する、
+            <br />
+            <span className="text-studio-charcoal font-medium">柔軟な撮影プランをご用意</span>
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`relative p-8 border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-hover animate-scale-in ${
+              className={`relative p-8 bg-white/90 backdrop-blur-sm border border-studio-silver/20 shadow-studio transition-all duration-500 hover:-translate-y-3 hover:shadow-hover animate-scale-in group ${
                 plan.popular 
-                  ? 'border-accent shadow-hover scale-105' 
-                  : 'border-border shadow-card hover:border-accent/50'
+                  ? 'ring-2 ring-studio-accent/50 scale-105 shadow-hover' 
+                  : 'hover:border-studio-accent/50'
               }`}
-              style={{animationDelay: `${index * 0.1}s`}}
+              style={{animationDelay: `${index * 0.15}s`}}
             >
+              {/* Discount Badge */}
+              <div className="absolute -top-3 -right-3">
+                <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  -{plan.discount} OFF
+                </div>
+              </div>
+              
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-accent text-accent-foreground px-4 py-2 flex items-center gap-2">
+                  <Badge className="bg-studio-accent text-white px-6 py-2 flex items-center gap-2 rounded-full shadow-lg">
                     <Star className="w-4 h-4" />
-                    人気No.1
+                    MOST POPULAR
                   </Badge>
                 </div>
               )}
               
-              <div className="space-y-6">
-                <div className="text-center space-y-2">
-                  <h3 className="text-2xl font-bold text-foreground">{plan.name}</h3>
-                  <p className="text-muted-foreground">{plan.subtitle}</p>
-                  <div className="text-4xl font-bold text-accent">{plan.price}</div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="p-3 bg-muted rounded-lg">
-                    <div className="text-sm text-muted-foreground">撮影時間</div>
-                    <div className="font-semibold">{plan.duration}</div>
+              <div className="space-y-8">
+                <div className="text-center space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-black text-foreground tracking-wide">{plan.name}</h3>
+                    <p className="text-muted-foreground font-medium">{plan.subtitle}</p>
                   </div>
-                  <div className="p-3 bg-muted rounded-lg">
-                    <div className="text-sm text-muted-foreground">納品カット数</div>
-                    <div className="font-semibold">{plan.shots}</div>
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground">{feature}</span>
+                  
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-center gap-3">
+                      <span className="text-lg text-muted-foreground line-through">{plan.originalPrice}</span>
+                      <div className="text-4xl font-black text-studio-accent">{plan.price}</div>
                     </div>
-                  ))}
+                    <div className="text-xs text-muted-foreground">税込価格・全て込み</div>
+                  </div>
                 </div>
                 
-                <div className="p-4 bg-accent/10 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-2">こんな方におすすめ:</div>
-                  <div className="text-foreground font-medium">{plan.recommended}</div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-gradient-card rounded-xl">
+                    <div className="text-xs text-muted-foreground font-medium uppercase tracking-wide">撮影期間</div>
+                    <div className="text-sm font-bold text-studio-charcoal mt-1">{plan.duration}</div>
+                  </div>
+                  <div className="text-center p-4 bg-gradient-card rounded-xl">
+                    <div className="text-xs text-muted-foreground font-medium uppercase tracking-wide">納品カット</div>
+                    <div className="text-sm font-bold text-studio-charcoal mt-1">{plan.shots}</div>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-sm font-bold text-studio-charcoal uppercase tracking-wide">含まれるサービス</h4>
+                  <div className="space-y-3">
+                    {plan.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-studio-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3 h-3 text-studio-accent" />
+                        </div>
+                        <span className="text-sm text-muted-foreground font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-sm font-bold text-studio-charcoal uppercase tracking-wide">追加特典</h4>
+                  <div className="space-y-2">
+                    {plan.extras.map((extra, extraIndex) => (
+                      <div key={extraIndex} className="flex items-center gap-3 p-2 bg-studio-accent/5 rounded-lg">
+                        <div className="w-2 h-2 bg-studio-accent rounded-full" />
+                        <span className="text-xs text-studio-charcoal font-medium">{extra}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="p-4 bg-studio-accent/10 rounded-xl border border-studio-accent/20">
+                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wide mb-2">推奨用途</div>
+                  <div className="text-sm text-studio-charcoal font-medium">{plan.recommended}</div>
                 </div>
                 
                 <Button 
-                  variant={plan.popular ? "cta" : "outline"} 
-                  className="w-full" 
-                  size="lg"
+                  className={`w-full py-4 text-base font-bold rounded-xl transition-all duration-300 ${
+                    plan.popular 
+                      ? 'bg-studio-accent hover:bg-studio-accent/90 text-white shadow-studio hover:shadow-hover hover:scale-105' 
+                      : 'bg-studio-charcoal hover:bg-studio-charcoal/90 text-white border-2 border-studio-charcoal hover:border-studio-accent'
+                  }`}
                 >
-                  このプランを選ぶ
+                  {plan.name}プランを選択
                 </Button>
               </div>
             </Card>
           ))}
         </div>
         
+        {/* Value Propositions */}
+        <div className="text-center mb-16">
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-card">
+              <div className="text-2xl font-black text-studio-accent mb-2">100%</div>
+              <div className="text-sm text-muted-foreground font-medium">満足保証</div>
+            </div>
+            <div className="p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-card">
+              <div className="text-2xl font-black text-studio-charcoal mb-2">24H</div>
+              <div className="text-sm text-muted-foreground font-medium">最短納期</div>
+            </div>
+            <div className="p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-card">
+              <div className="text-2xl font-black text-studio-accent mb-2">∞</div>
+              <div className="text-sm text-muted-foreground font-medium">修正回数</div>
+            </div>
+          </div>
+        </div>
+        
         {/* Special offers */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex flex-wrap justify-center gap-4">
-            <Badge variant="outline" className="px-4 py-2 text-base">
-              リピート割引: 2回目以降20%OFF
-            </Badge>
-            <Badge variant="outline" className="px-4 py-2 text-base">
-              複数ブランド同日撮影: 各15%OFF
-            </Badge>
-            <Badge className="bg-accent text-accent-foreground px-4 py-2 text-base">
-              初回限定: 50%OFF（期間限定）
-            </Badge>
+        <div className="text-center animate-fade-in">
+          <div className="bg-gradient-to-r from-studio-accent via-studio-accent to-studio-charcoal p-8 rounded-3xl shadow-studio text-white max-w-4xl mx-auto">
+            <h3 className="text-2xl lg:text-3xl font-black mb-6">
+              🎉 特別キャンペーン実施中
+            </h3>
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <div className="text-lg font-bold">初回限定</div>
+                <div className="text-2xl font-black">50% OFF</div>
+                <div className="text-xs opacity-90">全プラン対象</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <div className="text-lg font-bold">同日撮影</div>
+                <div className="text-2xl font-black">20% OFF</div>
+                <div className="text-xs opacity-90">複数ブランド</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <div className="text-lg font-bold">年間契約</div>
+                <div className="text-2xl font-black">30% OFF</div>
+                <div className="text-xs opacity-90">継続利用</div>
+              </div>
+            </div>
+            <p className="text-lg opacity-90 mb-4">
+              ⏰ 期間限定オファー - 2025年2月末まで
+            </p>
+            <button className="bg-white text-studio-charcoal px-8 py-4 rounded-xl font-bold hover:bg-studio-light transition-colors duration-300 shadow-hover">
+              今すぐ特別価格で予約する
+            </button>
           </div>
         </div>
       </div>

@@ -1,0 +1,50 @@
+<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="58" fill="#2563eb" stroke="#1d4ed8" strokeWidth="2"/>
+  
+  <!-- Woman Silhouette -->
+  <g transform="translate(20, 15)">
+    <!-- Hair -->
+    <path
+      d="M35 15 C45 8, 55 10, 65 18 C70 22, 68 28, 62 32 C58 35, 52 38, 48 42"
+      fill="#f8f9fa"
+    />
+    <path
+      d="M40 18 C48 12, 58 14, 65 22 C68 25, 66 30, 60 34"
+      fill="#e9ecef"
+    />
+    <path
+      d="M45 22 C52 18, 60 20, 65 26 C67 28, 65 32, 58 36"
+      fill="#ffffff"
+    />
+    
+    <!-- Head -->
+    <ellipse cx="40" cy="28" rx="8" ry="10" fill="#ffffff"/>
+    
+    <!-- Body -->
+    <path
+      d="M32 38 C34 36, 38 35, 42 36 L46 37 C48 38, 48 40, 46 42 L42 65 C40 67, 36 67, 34 65 L30 42 C30 40, 30 38, 32 38"
+      fill="#ffffff"
+    />
+    
+    <!-- Blue Top/Dress -->
+    <path
+      d="M35 42 L45 44 C47 45, 47 47, 45 49 L42 58 C40 60, 36 60, 34 58 L31 49 C31 47, 31 45, 33 44 L35 42"
+      fill="#1d4ed8"
+    />
+    
+    <!-- Arms -->
+    <path
+      d="M30 45 C28 43, 26 44, 25 46 L22 52 C21 54, 22 56, 24 57 L26 58 C28 59, 30 58, 31 56 L33 50 C34 48, 33 46, 31 45"
+      fill="#ffffff"
+    />
+    <path
+      d="M47 45 C49 43, 51 44, 52 46 L55 52 C56 54, 55 56, 53 57 L51 58 C49 59, 47 58, 46 56 L44 50 C43 48, 44 46, 46 45"
+      fill="#ffffff"
+    />
+    
+    <!-- Legs -->
+    <rect x="36" y="65" width="3" height="15" fill="#ffffff"/>
+    <rect x="41" y="65" width="3" height="15" fill="#ffffff"/>
+  </g>
+</svg>

@@ -1,4 +1,5 @@
 import { Instagram, Mail } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export const Footer = () => {
   return (
@@ -7,7 +8,9 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company info */}
           <div className="col-span-2 space-y-4">
-            <h3 className="text-2xl font-bold">LaMuse Studio</h3>
+            <div className="text-white">
+              <Logo size="lg" isWhite={true} />
+            </div>
             <p className="text-white/80 leading-relaxed">
               小規模〜中規模アパレルブランド向けの
               <br />
