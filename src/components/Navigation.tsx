@@ -61,7 +61,7 @@ export const Navigation = () => {
             </button>
           </div>
         </div>
-
+ 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-6 border-t border-studio-silver/20">
@@ -90,6 +90,7 @@ export const Navigation = () => {
             </div>
           </div>
         )}
+        </div>
       </nav>
 
       {/* Mobile bottom fixed CTA */}
