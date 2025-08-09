@@ -9,6 +9,9 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
+import { ReasonsSection } from "@/components/ReasonsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { AboutSection } from "@/components/AboutSection";
 
 const Index = () => {
   return (
@@ -16,11 +19,14 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <ProblemsSection />
+      <ReasonsSection />
       <SolutionsSection />
       <PricingSection />
       <FashionGallery />
       <PortfolioSection />
       <ProcessSection />
+      <TestimonialsSection />
+      <AboutSection />
       <FAQSection />
       <CTASection />
       <Footer />
