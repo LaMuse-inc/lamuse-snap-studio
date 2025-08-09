@@ -4,7 +4,7 @@ import heroStudio from "@/assets/hero-studio.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-studio-accent/5 rounded-full blur-3xl animate-pulse" />
@@ -17,59 +17,66 @@ export const HeroSection = () => {
           <div className="space-y-10 animate-fade-in">
             <div className="flex flex-wrap gap-3">
               <Badge variant="secondary" className="px-6 py-3 text-sm font-medium tracking-wide">
-                ✨ プロフェッショナル撮影スタジオ
+                👗 アパレル特化 撮影代行
               </Badge>
               <Badge variant="outline" className="px-6 py-3 text-sm font-medium tracking-wide border-studio-accent text-studio-accent">
-                📸 高品質・低価格
+                EC / LOOK / SNS まとめて対応
               </Badge>
             </div>
             
             <div className="space-y-8">
               <h1 className="text-6xl lg:text-7xl font-black leading-[0.9] text-foreground tracking-tight">
-                <span className="block">あなたの</span>
-                <span className="block text-studio-accent">ビジョンを</span>
-                <span className="block text-studio-charcoal">映像で表現</span>
+                <span className="block">アパレル撮影代行で</span>
+                <span className="block text-studio-accent">売れるビジュアルを</span>
+                <span className="block text-studio-charcoal">最短・高品質で</span>
               </h1>
               
               <p className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed font-light">
-                プロフェッショナルな撮影技術で、
+                EC・LOOK・SNSに最適化した一貫制作で、
                 <br />
-                <span className="text-studio-accent font-medium">ブランドの魅力を最大化</span>
+                <span className="text-studio-accent font-medium">売上に直結する写真と動画</span>を提供します
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button variant="default" size="lg" className="group bg-studio-accent hover:bg-studio-accent/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-studio transition-all duration-300 hover:shadow-hover hover:scale-105">
-                撮影を予約する
-                <svg 
-                  className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+              <Button asChild variant="default" size="lg" className="group bg-studio-accent hover:bg-studio-accent/90 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-studio transition-all duration-300 hover:shadow-hover hover:scale-105">
+                <a href="#contact">
+                  無料相談・見積り
+                  <svg 
+                    className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </Button>
               
-              <Button variant="outline" size="lg" className="px-8 py-6 text-lg font-semibold rounded-xl border-2 border-studio-charcoal text-studio-charcoal hover:bg-studio-charcoal hover:text-white transition-all duration-300">
-                ポートフォリオを見る
+              <Button asChild variant="outline" size="lg" className="px-8 py-6 text-lg font-semibold rounded-xl border-2 border-studio-charcoal text-studio-charcoal hover:bg-studio-charcoal hover:text-white transition-all duration-300">
+                <a href="#portfolio">撮影実績を見る</a>
               </Button>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-studio-silver/30">
               <div className="text-center">
-                <div className="text-3xl font-bold text-studio-charcoal">50+</div>
-                <div className="text-sm text-muted-foreground font-medium">撮影実績</div>
+                <div className="text-3xl font-bold text-studio-charcoal">120+</div>
+                <div className="text-sm text-muted-foreground font-medium">アパレル撮影実績</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-studio-accent">4.9</div>
-                <div className="text-sm text-muted-foreground font-medium">満足度評価</div>
+                <div className="text-3xl font-bold text-studio-accent">93%</div>
+                <div className="text-sm text-muted-foreground font-medium">リピート率</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-studio-charcoal">24h</div>
                 <div className="text-sm text-muted-foreground font-medium">最短納期</div>
               </div>
+            </div>
+
+            {/* Trust bar */}
+            <div className="pt-4 text-sm text-muted-foreground">
+              D2C・セレクトショップ・ECモール出店ブランドなど多数の取引実績
             </div>
           </div>
           
@@ -78,7 +85,7 @@ export const HeroSection = () => {
             <div className="relative overflow-hidden rounded-3xl shadow-studio">
               <img
                 src={heroStudio}
-                alt="プロフェッショナルな撮影スタジオ"
+                alt="アパレル撮影代行のスタジオシーン"
                 className="w-full h-[700px] object-cover hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />

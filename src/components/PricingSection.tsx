@@ -5,76 +5,76 @@ import { Check, Star } from "lucide-react";
 
 const plans = [
   {
-    name: "Starter",
-    subtitle: "スタートアップ向け",
+    name: "ECライト",
+    subtitle: "EC商品撮影に",
     price: "¥98,000",
     originalPrice: "¥150,000",
     duration: "半日撮影",
     shots: "30-50カット",
     features: [
-      "プロフォトグラファー",
-      "4K高解像度撮影",
+      "白背景/影あり・切り抜き対応",
+      "商品・トルソー・ハンガー撮影",
       "基本レタッチ込み",
-      "商用利用可能",
+      "EC規格最適化",
       "48時間以内納品"
     ],
     extras: [
       "スタジオ使用料込み",
-      "基本小道具提供"
+      "カラバリ1色追加無料"
     ],
-    recommended: "新規ブランド、少量商品撮影",
+    recommended: "新作ローンチ/小ロット商品のEC掲載",
     popular: false,
     discount: "35%",
     color: "studio-charcoal"
   },
   {
-    name: "Professional",
-    subtitle: "プロフェッショナル向け",
+    name: "LOOK標準",
+    subtitle: "モデル着用・LOOKに",
     price: "¥198,000",
     originalPrice: "¥280,000",
     duration: "1日集中撮影",
     shots: "80-120カット",
     features: [
-      "専属フォトグラファー",
-      "4K+RAW撮影",
-      "プロレタッチ",
-      "モデル手配可能",
-      "24時間以内納品",
-      "撮影ディレクション"
+      "モデル着用/全身・バストアップ・ディテール",
+      "4K+RAW撮影（静止画/短尺動画）",
+      "プロレタッチ/色合わせ",
+      "モデル・ヘアメイク手配可",
+      "24時間以内プレビュー納品",
+      "スタイリング/ディレクション付"
     ],
     extras: [
       "プレミアムスタジオ",
       "プロ照明機材",
-      "スタイリスト対応"
+      "ロケ撮影対応（近郊）"
     ],
-    recommended: "本格的なブランド撮影、カタログ制作",
+    recommended: "LOOK/ルックブック・LP用KV・広告用素材",
     popular: true,
     discount: "29%",
     color: "studio-accent"
   },
   {
-    name: "Enterprise",
-    subtitle: "大規模ブランド向け",
+    name: "ブランドフル",
+    subtitle: "大型キャンペーンに",
     price: "¥398,000",
     originalPrice: "¥550,000",
     duration: "2日間撮影",
     shots: "200+カット",
     features: [
-      "撮影チーム専属",
-      "8K撮影対応",
-      "高度レタッチ",
-      "複数モデル対応",
-      "ライブ編集",
-      "当日データ納品",
-      "動画撮影込み"
+      "撮影チーム専属（フォト/動画/レタッチ）",
+      "8K撮影/短尺動画複数本",
+      "高度レタッチ・合成/色校正",
+      "複数モデル/多拠点対応",
+      "現場ライブ編集/即日サムネ納品",
+      "当日一部データ納品",
+      "SNS縦型動画込み"
     ],
     extras: [
       "最高級スタジオ",
       "全機材フル装備",
       "専属チーム",
-      "コンセプト企画"
+      "コンセプト/絵コンテ制作"
     ],
-    recommended: "大型キャンペーン、年間契約ブランド",
+    recommended: "大型キャンペーン/年間契約ブランド",
     popular: false,
     discount: "28%",
     color: "studio-charcoal"
@@ -83,7 +83,7 @@ const plans = [
 
 export const PricingSection = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section id="pricing" className="py-32 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-studio-accent/5 rounded-full blur-3xl" />
@@ -96,11 +96,11 @@ export const PricingSection = () => {
             PRICING PLANS
           </div>
           <h2 className="text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight">
-            プロフェッショナル
+            アパレル特化
             <span className="block text-studio-accent">撮影パッケージ</span>
           </h2>
           <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-            あらゆる規模とニーズに対応する、
+            EC・LOOK・SNSの用途別に選べる、
             <br />
             <span className="text-studio-charcoal font-medium">柔軟な撮影プランをご用意</span>
           </p>
@@ -225,7 +225,7 @@ export const PricingSection = () => {
         
         {/* Special offers */}
         <div className="text-center animate-fade-in">
-          <div className="bg-gradient-to-r from-studio-accent via-studio-accent to-studio-charcoal p-8 rounded-3xl shadow-studio text-white max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-studio-accent via-studio-accent to-studio-charcoal p-8 rounded-3xl shadow-studio text-white max-w-4xl mx-auto">
             <h3 className="text-2xl lg:text-3xl font-black mb-6">
               🎉 特別キャンペーン実施中
             </h3>
@@ -246,9 +246,7 @@ export const PricingSection = () => {
                 <div className="text-xs opacity-90">継続利用</div>
               </div>
             </div>
-            <p className="text-lg opacity-90 mb-4">
-              ⏰ 期間限定オファー - 2025年2月末まで
-            </p>
+            <p className="text-lg opacity-90 mb-4">⏰ 期間限定オファー - 今月末まで</p>
             <button className="bg-white text-studio-charcoal px-8 py-4 rounded-xl font-bold hover:bg-studio-light transition-colors duration-300 shadow-hover">
               今すぐ特別価格で予約する
             </button>

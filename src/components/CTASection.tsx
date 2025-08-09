@@ -4,7 +4,7 @@ import { Instagram, Mail, Phone } from "lucide-react";
 
 export const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-hero">
+    <section id="contact" className="py-20 bg-gradient-hero">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <Badge className="bg-accent text-accent-foreground px-6 py-3 text-base font-semibold">
@@ -13,7 +13,7 @@ export const CTASection = () => {
           
           <h2 className="text-4xl lg:text-6xl font-bold text-foreground">
             今すぐプロの撮影で
-            <span className="text-studio-charcoal block">ブランドを輝かせよう</span>
+            <span className="text-studio-charcoal block">アパレルブランドを加速</span>
           </h2>
           
           <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed">
@@ -43,7 +43,7 @@ export const CTASection = () => {
           
           {/* Contact info */}
           <div className="pt-8 space-y-4">
-            <p className="text-muted-foreground">お気軽にお問い合わせください</p>
+            <p className="text-muted-foreground">お気軽にお問い合わせください（平均返信1営業日）</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent" />

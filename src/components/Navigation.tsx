@@ -39,14 +39,14 @@ export const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
+            <Button asChild
               variant="outline"
               className="border-studio-accent text-studio-accent hover:bg-studio-accent hover:text-white"
             >
-              お問い合わせ
+              <a href="#contact">お問い合わせ</a>
             </Button>
-            <Button className="bg-studio-accent hover:bg-studio-accent/90 text-white">
-              撮影を予約
+            <Button asChild className="bg-studio-accent hover:bg-studio-accent/90 text-white">
+              <a href="#pricing">撮影を予約</a>
             </Button>
           </div>
 
@@ -76,14 +76,14 @@ export const Navigation = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-studio-silver/20">
-                <Button
+                <Button asChild
                   variant="outline"
                   className="border-studio-accent text-studio-accent hover:bg-studio-accent hover:text-white"
                 >
-                  お問い合わせ
+                  <a href="#contact">お問い合わせ</a>
                 </Button>
-                <Button className="bg-studio-accent hover:bg-studio-accent/90 text-white">
-                  撮影を予約
+                <Button asChild className="bg-studio-accent hover:bg-studio-accent/90 text-white">
+                  <a href="#pricing">撮影を予約</a>
                 </Button>
               </div>
             </div>

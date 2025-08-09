@@ -32,15 +32,15 @@ export const PortfolioSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-section">
+    <section id="portfolio" className="py-32 bg-gradient-section">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-20 animate-fade-in">
           <div className="inline-block px-6 py-2 bg-studio-accent/10 text-studio-accent rounded-full text-sm font-medium tracking-wide mb-6">
             PORTFOLIO
           </div>
           <h2 className="text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight">
-            プロフェッショナル
-            <span className="block text-studio-accent">撮影実績</span>
+            アパレル撮影
+            <span className="block text-studio-accent">実績</span>
           </h2>
           <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
             各ブランドの独自性を最大限に引き出す、

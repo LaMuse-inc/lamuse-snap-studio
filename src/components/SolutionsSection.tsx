@@ -48,7 +48,7 @@ const services = [
 
 export const SolutionsSection = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section id="services" className="py-32 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-studio-accent rounded-full blur-3xl" />
@@ -58,16 +58,16 @@ export const SolutionsSection = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 animate-fade-in">
           <div className="inline-block px-6 py-2 bg-studio-accent/10 text-studio-accent rounded-full text-sm font-medium tracking-wide mb-6">
-            PROFESSIONAL SERVICES
+            APPAREL SHOOTING SERVICES
           </div>
           <h2 className="text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight">
-            フォトグラフィー
-            <span className="block text-studio-accent">サービス一覧</span>
+            アパレル特化
+            <span className="block text-studio-accent">撮影サービス</span>
           </h2>
           <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-            あらゆる撮影ニーズに対応する、
+            EC・LOOK・SNSまで、
             <br />
-            <span className="text-studio-charcoal font-medium">プロフェッショナルなサービス展開</span>
+            <span className="text-studio-charcoal font-medium">ワンストップで対応</span>
           </p>
         </div>
         
