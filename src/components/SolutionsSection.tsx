@@ -48,7 +48,7 @@ const services = [
 
 export const SolutionsSection = () => {
   return (
-    <section id="services" className="py-32 bg-background relative overflow-hidden">
+    <section id="services" className="py-32 bg-background relative overflow-hidden scroll-mt-24">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-studio-accent rounded-full blur-3xl" />

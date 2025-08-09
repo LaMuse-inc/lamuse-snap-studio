@@ -83,7 +83,7 @@ const plans = [
 
 export const PricingSection = () => {
   return (
-    <section id="pricing" className="py-32 bg-background relative overflow-hidden">
+    <section id="pricing" className="py-32 bg-background relative overflow-hidden scroll-mt-24">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-studio-accent/5 rounded-full blur-3xl" />

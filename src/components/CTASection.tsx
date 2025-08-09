@@ -4,7 +4,7 @@ import { Instagram, Mail, Phone } from "lucide-react";
 
 export const CTASection = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-hero">
+    <section id="contact" className="py-20 bg-gradient-hero scroll-mt-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <Badge className="bg-accent text-accent-foreground px-6 py-3 text-base font-semibold">

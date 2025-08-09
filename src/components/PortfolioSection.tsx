@@ -32,7 +32,7 @@ export const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-32 bg-gradient-section">
+    <section id="portfolio" className="py-32 bg-gradient-section scroll-mt-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-20 animate-fade-in">
           <div className="inline-block px-6 py-2 bg-studio-accent/10 text-studio-accent rounded-full text-sm font-medium tracking-wide mb-6">
@@ -61,6 +61,7 @@ export const PortfolioSection = () => {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy" decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
@@ -143,6 +144,7 @@ export const PortfolioSection = () => {
                   src={portfolio2}
                   alt="DARS様撮影事例"
                   className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy" decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>

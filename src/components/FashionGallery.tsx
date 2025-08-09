@@ -120,7 +120,7 @@ export const FashionGallery = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white scroll-mt-24">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
@@ -151,6 +151,7 @@ export const FashionGallery = () => {
                   src={item.src}
                   alt={item.title}
                   className={`w-full object-cover group-hover:scale-110 transition-transform duration-700 ${getHeightClasses(item.size)}`}
+                  loading="lazy" decoding="async"
                 />
                 
                 {/* Overlay */}

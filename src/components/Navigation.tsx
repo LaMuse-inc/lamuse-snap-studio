@@ -15,9 +15,10 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-studio-silver/20">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-studio-silver/20">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Logo size="md" />
@@ -89,7 +90,17 @@ export const Navigation = () => {
             </div>
           </div>
         )}
+      </nav>
+
+      {/* Mobile bottom fixed CTA */}
+      <div className="fixed-cta">
+        <a href="#contact" className="fixed-cta-inner">
+          無料相談・見積り
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
       </div>
-    </nav>
+    </>
   );
 };

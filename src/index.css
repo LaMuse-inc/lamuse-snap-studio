@@ -150,3 +150,13 @@ All colors MUST be HSL.
     color: hsl(var(--studio-charcoal));
   }
 }
+
+@layer components {
+  /* Mobile bottom fixed CTA */
+  .fixed-cta {
+    @apply fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden;
+  }
+  .fixed-cta-inner {
+    @apply bg-studio-charcoal text-white px-5 py-3 rounded-full shadow-studio flex items-center gap-3;
+  }
+}
