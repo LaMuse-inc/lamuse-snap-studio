@@ -90,6 +90,7 @@ export const Navigation = () => {
             </div>
           </div>
         )}
+        </div>
       </nav>
 
       {/* Mobile bottom fixed CTA */}
