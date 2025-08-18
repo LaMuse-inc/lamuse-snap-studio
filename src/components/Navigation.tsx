@@ -53,7 +53,7 @@ export const Navigation = () => {
             </button>
           </div>
         </div>
-
+ 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-6 border-t border-gray-100 bg-white">
