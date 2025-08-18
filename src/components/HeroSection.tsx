@@ -94,7 +94,7 @@ export const HeroSection = () => {
               {/* Company Logos - Scrolling Animation */}
               <div className="p-8 overflow-hidden">
                 <div className="relative">
-                  <div className="flex justify-center">
+                  <div className="flex animate-scroll">
                     {/* First set of brands */}
                     {[
                       { name: "NEW ERA", logo: "NE", image: "/new-era.png" },
@@ -105,6 +105,33 @@ export const HeroSection = () => {
                       { name: "ilwiil", logo: "I", image: "/ilwil.jpg" },
                     ].map((brand, index) => (
                       <div key={`first-${index}`} className="flex-shrink-0 mx-6">
+                        <div className="p-4 transition-all duration-300">
+                          {brand.image ? (
+                            <div className="w-40 h-20 flex items-center justify-center">
+                              <img 
+                                src={brand.image}
+                                alt={brand.name}
+                                className="max-w-full max-h-full object-contain"
+                              />
+                            </div>
+                          ) : (
+                            <div className="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                              {brand.logo}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    {/* Duplicate set for seamless loop */}
+                    {[
+                      { name: "NEW ERA", logo: "NE", image: "/new-era.png" },
+                      { name: "Carhartt", logo: "C", image: "/carhartt.png" },
+                      { name: "Hinata Life", logo: "HL", image: "/hinata_life.png" },
+                      { name: "Dars", logo: "D", image: "/dars.jpg" },
+                      { name: "MAROS", logo: "M", image: "/MAROS.avif" },
+                      { name: "ilwiil", logo: "I", image: "/ilwil.jpg" },
+                    ].map((brand, index) => (
+                      <div key={`second-${index}`} className="flex-shrink-0 mx-6">
                         <div className="p-4 transition-all duration-300">
                           {brand.image ? (
                             <div className="w-40 h-20 flex items-center justify-center">
