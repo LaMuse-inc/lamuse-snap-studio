@@ -166,7 +166,7 @@ export const FashionGallery = () => {
                 </Badge>
 
                 {/* Zoom Icon */}
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <ZoomIn className="w-4 h-4 text-studio-charcoal" />
                 </div>
                 
@@ -182,7 +182,7 @@ export const FashionGallery = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <button className="group inline-flex items-center gap-3 bg-studio-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-studio-accent/90 transition-all duration-300 hover:gap-4">
+          <button className="group inline-flex items-center gap-3 bg-studio-accent text-white px-8 py-4 rounded font-semibold hover:bg-studio-accent/90 transition-all duration-300 hover:gap-4">
             <Search className="w-5 h-5" />
             全ポートフォリオを見る
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +206,7 @@ export const FashionGallery = () => {
             />
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/30 transition-colors"
+              className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded p-2 text-white hover:bg-white/30 transition-colors"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

@@ -32,10 +32,10 @@ export const ReasonsSection = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4 px-6 py-2 text-sm font-semibold">
-            Why LaMuse Studio
+            Why Fashion Partners
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-black text-foreground tracking-tight">
-            LaMuse Studioが選ばれる
+            Fashion Partnersが選ばれる
             <span className="block text-studio-accent">3つの理由</span>
           </h2>
         </div>
@@ -49,7 +49,7 @@ export const ReasonsSection = () => {
                 className="p-8 bg-gradient-card border-0 shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-studio-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 rounded bg-studio-accent/10 flex items-center justify-center flex-shrink-0">
                     <Icon className="w-7 h-7 text-studio-accent" />
                   </div>
                   <div className="space-y-3">
@@ -58,7 +58,7 @@ export const ReasonsSection = () => {
                     <div className="space-y-2">
                       {reason.bulletPoints.map((bp) => (
                         <div key={bp} className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 bg-studio-accent rounded-full" />
+                          <div className="w-1.5 h-1.5 bg-studio-accent rounded" />
                           <span className="text-sm text-foreground/80">{bp}</span>
                         </div>
                       ))}

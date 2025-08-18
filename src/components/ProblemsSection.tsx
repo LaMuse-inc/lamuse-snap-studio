@@ -30,7 +30,7 @@ export const ProblemsSection = () => {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-destructive/10 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-10 h-10 bg-destructive/10 rounded flex items-center justify-center">
                   <AlertCircle className="w-5 h-5 text-destructive" />
                 </div>
                 <p className="text-foreground leading-relaxed">{problem}</p>

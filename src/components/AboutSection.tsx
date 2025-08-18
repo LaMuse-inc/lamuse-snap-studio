@@ -1,63 +1,34 @@
-import { Card } from "@/components/ui/card";
-
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50 scroll-mt-24">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-black text-studio-charcoal mb-6">
-            LaMuse Studio<span className="text-studio-accent">について</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            アパレルブランドのための専門撮影代行サービス。EC・LOOK・SNSまで一貫制作で、
-            <span className="text-studio-accent font-semibold">最短24時間</span>のスピードと安定したクオリティを両立します。
-          </p>
+    <section id="about" className="relative overflow-hidden py-24 bg-gray-50 scroll-mt-24">
+      {/* Giant background text */}
+      <div className="pointer-events-none select-none absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className="text-gray-200/40 text-[14vw] md:text-[12vw] lg:text-[10vw] leading-none font-black tracking-tight text-center">
+          <div>FASHION</div>
+          <div>PARTNERS</div>
         </div>
-        
-        <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-center">
-          <div className="space-y-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <Card className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-sm text-studio-accent uppercase font-semibold mb-2">ミッション</div>
-                <div className="text-lg font-bold text-studio-charcoal">ブランドを"売れるビジュアル"で加速</div>
-              </Card>
-              <Card className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-sm text-studio-accent uppercase font-semibold mb-2">ビジョン</div>
-                <div className="text-lg font-bold text-studio-charcoal">小さなブランドの"いちばんの相棒"に</div>
-              </Card>
-              <Card className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-sm text-studio-accent uppercase font-semibold mb-2">事業形態</div>
-                <div className="text-lg font-bold text-studio-charcoal">撮影代行サービス</div>
-              </Card>
-              <Card className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-sm text-studio-accent uppercase font-semibold mb-2">専門分野</div>
-                <div className="text-lg font-bold text-studio-charcoal">アパレル・ファッション</div>
-              </Card>
-            </div>
-          </div>
-          
-          <div className="space-y-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-studio-charcoal mb-6">お問い合わせ</h3>
-              <div className="space-y-4 text-gray-600 mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-studio-accent rounded-full"></div>
-                  <span>営業時間: 平日 10:00-18:00</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-studio-accent rounded-full"></div>
-                  <span>Email: info@lamuse-studio.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-studio-accent rounded-full"></div>
-                  <span>お見積り: 無料・24時間以内に回答</span>
-                </div>
-              </div>
-              <a href="#contact" className="inline-block bg-studio-accent hover:bg-studio-accent/90 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all">
-                お問い合わせフォームへ
-              </a>
-            </div>
-          </div>
+      </div>
+
+
+
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center max-w-5xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-10">
+            Fashion Partnersとは？
+          </h2>
+
+          {/* Key message with highlights */}
+          <p className="text-2xl lg:text-3xl font-semibold leading-relaxed text-gray-900">
+            アパレルの
+            <span className="align-middle mx-2 px-3 py-1 rounded bg-blue-600 text-white">撮影・EC・梱包資材・OEM</span>
+            を
+            <span className="align-middle mx-2 px-3 py-1 rounded bg-gray-900 text-white">一社で完結</span>
+            できます。
+          </p>
+
+          <p className="mt-6 text-lg lg:text-xl text-gray-600 leading-relaxed">
+            企画から制作・運用までワンストップ。最短スピードで、ブランドの世界観を保ったまま成果に直結させます。
+          </p>
         </div>
       </div>
     </section>

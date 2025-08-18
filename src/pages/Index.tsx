@@ -1,29 +1,28 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { ReasonsSection } from "@/components/ReasonsSection";
-import { SolutionsSection } from "@/components/SolutionsSection";
-import { PortfolioSection } from "@/components/PortfolioSection";
-import { ProcessSection } from "@/components/ProcessSection";
-import { PricingSection } from "@/components/PricingSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { ServicesOverviewSection } from "@/components/ServicesOverviewSection";
+import { SocialProofSection } from "@/components/SocialProofSection";
 import { FAQSection } from "@/components/FAQSection";
+
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <Navigation />
       <HeroSection />
+      {/* とは？ */}
       <AboutSection />
-      <ReasonsSection />
-      <SolutionsSection />
-      <PortfolioSection />
-      <ProcessSection />
-      <PricingSection />
-      <TestimonialsSection />
+      {/* サービス/連携 */}
+      <ServicesOverviewSection />
+      {/* 実績・社会的証明（任意） */}
+      <SocialProofSection />
+      {/* FAQ */}
       <FAQSection />
+
+      {/* お問い合わせCTA */}
       <CTASection />
       <Footer />
     </div>

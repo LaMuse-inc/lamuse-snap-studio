@@ -8,15 +8,14 @@ export const Navigation = () => {
 
   const navigationItems = [
     { href: "#services", label: "サービス" },
-    { href: "#portfolio", label: "ポートフォリオ" },
+    { href: "#portfolio", label: "実績" },
     { href: "#pricing", label: "料金" },
-    { href: "#process", label: "制作フロー" },
-    { href: "#faq", label: "よくある質問" },
+    { href: "#contact", label: "お問い合わせ" },
   ];
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-studio-silver/20">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -25,29 +24,22 @@ export const Navigation = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navigationItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-studio-charcoal font-medium hover:text-studio-accent transition-colors duration-300 relative group"
+                className="text-gray-600 font-medium hover:text-gray-900 transition-colors text-base"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-studio-accent transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button asChild
-              variant="outline"
-              className="border-studio-accent text-studio-accent hover:bg-studio-accent hover:text-white"
-            >
-              <a href="#contact">お問い合わせ</a>
-            </Button>
-            <Button asChild className="bg-studio-accent hover:bg-studio-accent/90 text-white">
-              <a href="#pricing">撮影を予約</a>
+          <div className="hidden md:flex items-center">
+            <Button asChild className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transition-all duration-300 rounded px-6 py-2 font-medium shadow-md hover:shadow-lg">
+              <a href="#contact">無料相談</a>
             </Button>
           </div>
 
@@ -55,7 +47,7 @@ export const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-studio-charcoal hover:text-studio-accent transition-colors"
+              className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -64,27 +56,21 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 border-t border-studio-silver/20">
+          <div className="md:hidden py-6 border-t border-gray-100 bg-white">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-studio-charcoal font-medium py-2 hover:text-studio-accent transition-colors"
+                  className="text-gray-700 font-medium py-2 hover:text-gray-900 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="flex flex-col space-y-3 pt-4 border-t border-studio-silver/20">
-                <Button asChild
-                  variant="outline"
-                  className="border-studio-accent text-studio-accent hover:bg-studio-accent hover:text-white"
-                >
-                  <a href="#contact">お問い合わせ</a>
-                </Button>
-                <Button asChild className="bg-studio-accent hover:bg-studio-accent/90 text-white">
-                  <a href="#pricing">撮影を予約</a>
+              <div className="pt-4 border-t border-gray-100">
+                <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transition-all duration-300 rounded py-3 font-medium shadow-md">
+                  <a href="#contact">無料相談</a>
                 </Button>
               </div>
             </div>
@@ -96,7 +82,7 @@ export const Navigation = () => {
       {/* Mobile bottom fixed CTA */}
       <div className="fixed-cta">
         <a href="#contact" className="fixed-cta-inner">
-          無料相談・見積り
+          無料相談
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>

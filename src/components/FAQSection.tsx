@@ -4,60 +4,71 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { HelpCircle, MessageCircle } from "lucide-react";
 
 const faqs = [
   {
     question: "最小撮影点数はありますか？",
-    answer: "特に最小撮影点数の制限はございません。1点からでも承っておりますが、コストパフォーマンスの観点から、複数点での撮影をおすすめしております。"
+    answer: "1点から対応可能です。コスト面では複数点のご依頼をおすすめしています。"
   },
   {
-    question: "モデルは自社で用意する必要がありますか？",
-    answer: "モデルのキャスティングも当スタジオで承っております。ブランドイメージに合ったモデルを、相場より30-40%安価でご提案可能です。もちろん、お客様ご指定のモデルでの撮影も可能です。"
+    question: "モデルの手配もお願いできますか？",
+    answer: "可能です。ブランドイメージに合わせたキャスティングを相場より抑えた価格でご提案します。"
   },
   {
-    question: "撮影場所は選べますか？",
-    answer: "基本的には当スタジオでの撮影となりますが、ロケーション撮影も承っております。ロケーション撮影の場合は別途ご相談させていただきます。"
+    question: "納期はどのくらいですか？",
+    answer: "内容により異なりますが、静止画は最短24時間での納品実績があります。"
   },
   {
-    question: "納品データの形式は？",
-    answer: "JPEG形式での納品が基本となります。WEB用（1200px程度）と印刷用（300dpi）の2サイズでの納品が可能です。RAWデータをご希望の場合は別途ご相談ください。"
+    question: "ECサイト構築も依頼できますか？",
+    answer: "はい。撮影と合わせてEC構築や運用設計までワンストップで対応します。"
   },
   {
-    question: "キャンセル料はかかりますか？",
-    answer: "撮影日の1週間前までのキャンセルは無料です。それ以降のキャンセルについては、撮影料の30%のキャンセル料を頂戴いたします。"
-  },
-  {
-    question: "撮影データの著作権は？",
-    answer: "撮影データの使用権はお客様に帰属いたします。商用利用、SNS投稿など自由にご利用いただけます。"
+    question: "料金の目安を知りたいです",
+    answer: "撮影は1カット¥1,000〜、20カットパック¥20,000など。詳細は料金セクションをご覧ください。"
   }
 ];
 
 export const FAQSection = () => {
   return (
-    <section id="faq" className="py-20 bg-background scroll-mt-24">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+    <section id="faq" className="py-24 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gray-50"></div>
+      
+
+      <div className="absolute top-32 left-20 w-64 h-64 bg-gradient-to-r from-gray-100/20 to-gray-200/20 rounded blur-3xl"></div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-semibold mb-6 text-gray-900">
             よくある質問
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             お客様からよくいただくご質問をまとめました
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <Accordion type="single" collapsible className="space-y-4">
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible defaultValue="item-0" className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-border rounded-lg px-6 shadow-card hover:shadow-hover transition-all duration-300"
+                className="glass-card rounded px-6 transition-all duration-300 hover:scale-[1.02]"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-accent">
-                  {faq.question}
+                <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-gray-700 py-6">
+                  <div className="flex items-center gap-4">
+                    <span className="inline-flex w-8 h-8 items-center justify-center rounded bg-gray-900 text-white text-sm font-bold">Q</span>
+                    <span>{faq.question}</span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pt-2">
-                  {faq.answer}
+                <AccordionContent className="text-gray-700 leading-relaxed pt-0 pb-6">
+                  <div className="mt-4 rounded-lg glass-light p-6">
+                    <div className="flex gap-4">
+                      <span className="inline-flex w-8 h-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-sm font-bold flex-shrink-0">A</span>
+                      <span className="text-gray-700">{faq.answer}</span>
+                    </div>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}

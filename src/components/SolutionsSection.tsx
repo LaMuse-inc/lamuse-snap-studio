@@ -51,13 +51,13 @@ export const SolutionsSection = () => {
     <section id="services" className="py-32 bg-background relative overflow-hidden scroll-mt-24">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-studio-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-studio-charcoal rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-studio-accent rounded blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-studio-charcoal rounded blur-3xl" />
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-block px-6 py-2 bg-studio-accent/10 text-studio-accent rounded-full text-sm font-medium tracking-wide mb-6">
+          <div className="inline-block px-6 py-2 bg-studio-accent/10 text-studio-accent rounded text-sm font-medium tracking-wide mb-6">
             APPAREL SHOOTING SERVICES
           </div>
           <h2 className="text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight">
@@ -85,15 +85,15 @@ export const SolutionsSection = () => {
                 
                 <div className="relative z-10 space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 w-16 h-16 bg-studio-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-studio-accent/20 group-hover:scale-110 transition-all duration-300">
+                    <div className="flex-shrink-0 w-16 h-16 bg-studio-accent/10 rounded flex items-center justify-center group-hover:bg-studio-accent/20 group-hover:scale-110 transition-all duration-300">
                       <IconComponent className="w-8 h-8 text-studio-accent" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-foreground group-hover:text-studio-charcoal transition-colors">
                         {service.title}
                       </h3>
-                      <div className="inline-flex items-center gap-2 bg-studio-accent/10 px-3 py-1 rounded-full mt-2">
-                        <div className="w-2 h-2 bg-studio-accent rounded-full animate-pulse" />
+                      <div className="inline-flex items-center gap-2 bg-studio-accent/10 px-3 py-1 rounded mt-2">
+                        <div className="w-2 h-2 bg-studio-accent rounded animate-pulse" />
                         <span className="text-xs font-bold text-studio-accent uppercase tracking-wider">{service.highlight}</span>
                       </div>
                     </div>
@@ -110,7 +110,7 @@ export const SolutionsSection = () => {
                     <div className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-3">
-                          <div className="w-1.5 h-1.5 bg-studio-accent rounded-full" />
+                          <div className="w-1.5 h-1.5 bg-studio-accent rounded" />
                           <span className="text-sm text-muted-foreground font-medium">{feature}</span>
                         </div>
                       ))}
@@ -133,7 +133,7 @@ export const SolutionsSection = () => {
         
         {/* CTA Section */}
         <div className="mt-20 text-center animate-fade-in">
-          <div className="bg-gradient-to-r from-studio-accent via-studio-accent to-studio-charcoal p-12 rounded-3xl shadow-studio text-white">
+          <div className="bg-gradient-to-r from-studio-accent via-studio-accent to-studio-charcoal p-12 rounded-xl shadow-studio text-white">
             <h3 className="text-3xl lg:text-4xl font-black mb-6">
               完全カスタマイズ対応
             </h3>
