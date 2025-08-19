@@ -1,8 +1,13 @@
 import { ArrowLeft, MapPin, Phone, Mail, Users, Calendar, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Logo } from "@/components/Logo";
+import { useEffect } from "react";
 
 export const About = () => {
+  useEffect(() => {
+    document.title = "会社概要｜Fashion Partners - アパレルブランドのワンストップソリューション";
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
