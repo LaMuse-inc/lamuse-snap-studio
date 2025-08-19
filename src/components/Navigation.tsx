@@ -16,8 +16,8 @@ export const Navigation = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Logo size="md" />
@@ -38,7 +38,7 @@ export const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button asChild className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transition-all duration-300 rounded px-6 py-2 font-medium shadow-md hover:shadow-lg">
+            <Button asChild className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transition-all duration-300 rounded px-4 md:px-6 py-2 font-medium shadow-md hover:shadow-lg text-sm md:text-base">
               <a href="#contact">無料相談</a>
             </Button>
           </div>
@@ -56,22 +56,24 @@ export const Navigation = () => {
  
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 border-t border-gray-100 bg-white">
-            <div className="flex flex-col space-y-4">
-              {navigationItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 font-medium py-2 hover:text-gray-900 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-              <div className="pt-4 border-t border-gray-100">
-                <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transition-all duration-300 rounded py-3 font-medium shadow-md">
-                  <a href="#contact">無料相談</a>
-                </Button>
+          <div className="md:hidden py-4 sm:py-6 border-t border-gray-100 bg-white">
+            <div className="container mx-auto px-4 sm:px-6">
+              <div className="flex flex-col space-y-3 sm:space-y-4">
+                {navigationItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-gray-700 font-medium py-2 hover:text-gray-900 transition-colors text-base"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <div className="pt-3 sm:pt-4 border-t border-gray-100">
+                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transition-all duration-300 rounded py-3 font-medium shadow-md">
+                    <a href="#contact">無料相談</a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

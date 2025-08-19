@@ -284,23 +284,23 @@ export const ServicesOverviewSection = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-gray-50 relative overflow-hidden">
+    <section id="services" className="py-16 sm:py-20 md:py-24 bg-gray-50 relative overflow-hidden">
 
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-gray-100 px-4 py-2 rounded text-sm font-medium text-gray-600 mb-6">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-gray-100 px-3 sm:px-4 py-2 rounded text-xs sm:text-sm font-medium text-gray-600 mb-4 sm:mb-6">
             OUR SERVICES
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
             4つのサービスで<br className="md:hidden" />
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">完全サポート</span>
           </h2>
         </div>
 
         {/* Services Grid - Large Images */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             
@@ -308,7 +308,7 @@ export const ServicesOverviewSection = () => {
               <button
                 key={service.id}
                 onClick={() => handleServiceClick(service)}
-                className="group relative block overflow-hidden rounded-lg bg-gray-900 aspect-[4/3] md:aspect-[16/10] w-full"
+                className="group relative block overflow-hidden rounded-lg bg-gray-900 aspect-[4/3] sm:aspect-[16/12] md:aspect-[16/10] w-full"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -324,12 +324,12 @@ export const ServicesOverviewSection = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative h-full flex flex-col justify-end p-8 md:p-10">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-white" />
+                <div className="relative h-full flex flex-col justify-end p-4 sm:p-6 md:p-8 lg:p-10">
+                  <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                       {service.title}
                     </h3>
                   </div>
@@ -342,8 +342,8 @@ export const ServicesOverviewSection = () => {
                   }`}
                 >
                   <div className="text-center">
-                    <p className="text-white text-5xl font-bold mb-4 tracking-wider">MORE</p>
-                    <div className="w-16 h-1 bg-white mx-auto animate-pulse"></div>
+                    <p className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-wider">MORE</p>
+                    <div className="w-12 sm:w-16 h-1 bg-white mx-auto animate-pulse"></div>
                   </div>
                 </div>
               </button>
@@ -357,28 +357,28 @@ export const ServicesOverviewSection = () => {
         {selectedService && (
           <div className="max-h-[90vh] overflow-y-auto">
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-8">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-16 h-16 bg-blue-100 rounded flex items-center justify-center">
-                  <selectedService.icon className="w-8 h-8 text-blue-600" />
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-6 md:p-8">
+              <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-blue-100 rounded flex items-center justify-center">
+                  <selectedService.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-600" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900">{selectedService.title}</h2>
-                  <p className="text-lg text-gray-600">{selectedService.subtitle}</p>
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">{selectedService.title}</h2>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600">{selectedService.subtitle}</p>
                 </div>
               </div>
-              <p className="text-gray-700 text-lg leading-relaxed">{selectedService.detailedDescription}</p>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">{selectedService.detailedDescription}</p>
             </div>
 
-            <div className="p-8 space-y-8">
+            <div className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8">
               {/* Features */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">サービス内容</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">サービス内容</h3>
+                <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                   {selectedService.features.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
+                    <div key={index} className="flex items-start gap-2 sm:gap-3">
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -386,17 +386,17 @@ export const ServicesOverviewSection = () => {
 
               {/* Pricing Plans */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">料金プラン</h3>
-                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">料金プラン</h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6">
                   {selectedService.plans.map((plan, index) => (
-                    <div key={index} className="bg-gray-50 p-6 rounded">
+                    <div key={index} className="bg-gray-50 p-4 sm:p-6 rounded">
                       <h4 className="font-bold text-gray-900 mb-2">{plan.name}</h4>
-                      <p className="text-2xl font-bold text-blue-600 mb-2">{plan.price}</p>
-                      <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
-                      <ul className="space-y-2">
+                      <p className="text-xl sm:text-2xl font-bold text-blue-600 mb-2">{plan.price}</p>
+                      <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">{plan.description}</p>
+                      <ul className="space-y-1 sm:space-y-2">
                         {plan.features.map((feature, fIndex) => (
                           <li key={fIndex} className="text-xs text-gray-600 flex items-center gap-2">
-                            <div className="w-1 h-1 bg-blue-600 rounded"></div>
+                            <div className="w-1 h-1 bg-blue-600 rounded flex-shrink-0"></div>
                             {feature}
                           </li>
                         ))}
@@ -410,15 +410,15 @@ export const ServicesOverviewSection = () => {
 
               {/* Process */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">サービスの流れ</h3>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">サービスの流れ</h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                   {selectedService.process.map((step, index) => (
                     <div key={index} className="text-center">
-                      <div className="w-12 h-12 bg-blue-600 text-white rounded flex items-center justify-center font-bold text-lg mx-auto mb-3">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 text-white rounded flex items-center justify-center font-bold text-base sm:text-lg mx-auto mb-3">
                         {step.step}
                       </div>
-                      <h4 className="font-bold text-gray-900 mb-2">{step.title}</h4>
-                      <p className="text-sm text-gray-600">{step.description}</p>
+                      <h4 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">{step.title}</h4>
+                      <p className="text-xs sm:text-sm text-gray-600">{step.description}</p>
                     </div>
                   ))}
                 </div>
@@ -427,44 +427,29 @@ export const ServicesOverviewSection = () => {
 
               {/* FAQ */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">よくある質問</h3>
-                <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">よくある質問</h3>
+                <div className="space-y-3 sm:space-y-4">
                   {selectedService.faqs.map((faq, index) => (
-                    <div key={index} className="bg-gray-50 p-6 rounded">
-                      <h4 className="font-bold text-gray-900 mb-2">Q: {faq.q}</h4>
-                      <p className="text-gray-700">A: {faq.a}</p>
+                    <div key={index} className="bg-gray-50 p-4 sm:p-6 rounded">
+                      <h4 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">Q: {faq.q}</h4>
+                      <p className="text-gray-700 text-sm sm:text-base">A: {faq.a}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* CTA */}
-              <div className="pt-6 border-t">
+              <div className="pt-4 sm:pt-6 border-t">
                 <div className="flex justify-center">
-                  <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
+                  <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto">
                     <a 
-                      href={
-                        selectedService?.id === "photography" 
-                          ? "https://docs.google.com/forms/d/e/1FAIpQLSfbWz5LGXpd7fH0FA28HIgFzpFtjtde6l2ur_3w_q0PWGJ-RQ/viewform"
-                          : selectedService?.id === "packaging"
-                          ? "https://docs.google.com/forms/d/e/1FAIpQLSd6bUijAW7UuCxB7OYe1anPPXKvj9OJ_gqno1n-567rS0W0xg/viewform"
-                          : selectedService?.id === "oem"
-                          ? "https://docs.google.com/forms/d/e/1FAIpQLScvguhOpvztfJE9NLEiNGNGl2IM3wBaSBtYzfusnj2g-VMrJQ/viewform"
-                          : "https://docs.google.com/forms/d/e/1FAIpQLSd_nL-lUgCxbF10DIfLDzxm3b4LZIJJcVOcVNv6Ag6B8Y550w/viewform"
-                      }
+                      href="https://fashionpartners.manus.space/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"
                     >
-                      {selectedService?.id === "photography" 
-                        ? "撮影予約フォーム" 
-                        : selectedService?.id === "packaging"
-                        ? "見積もりを出す"
-                        : selectedService?.id === "oem"
-                        ? "OEM製造を問い合わせる"
-                        : "このサービスを問い合わせる"
-                      }
-                      <ArrowRight className="w-5 h-5" />
+                      お問い合わせ
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                     </a>
                   </Button>
                 </div>
