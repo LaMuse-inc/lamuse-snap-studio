@@ -18,11 +18,11 @@ export const AboutSection = () => {
           {/* Key message with highlights */}
           <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed text-gray-900 space-y-2 sm:space-y-0">
             <div className="block sm:inline">アパレルの</div>
-            <span className="inline-block align-middle mx-1 sm:mx-2 px-2 sm:px-3 py-1 rounded bg-blue-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+            <span className="inline-block align-middle mx-1 sm:mx-2 px-2 sm:px-3 py-1 rounded bg-blue-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold">
               撮影・EC・梱包資材・OEM
             </span>
             <div className="block sm:inline">を</div>
-            <span className="inline-block align-middle mx-1 sm:mx-2 px-2 sm:px-3 py-1 rounded bg-gray-900 text-white text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+            <span className="inline-block align-middle mx-1 sm:mx-2 px-2 sm:px-3 py-1 rounded bg-gray-900 text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold">
               一社で完結
             </span>
             <div className="block sm:inline">できます。</div>
