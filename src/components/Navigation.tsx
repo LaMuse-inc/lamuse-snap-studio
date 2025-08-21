@@ -9,7 +9,6 @@ export const Navigation = () => {
   const navigationItems = [
     { href: "#services", label: "サービス" },
     { href: "#portfolio", label: "実績" },
-    { href: "#pricing", label: "料金" },
     { href: "#contact", label: "お問い合わせ" },
   ];
 
