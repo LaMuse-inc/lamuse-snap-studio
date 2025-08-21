@@ -87,7 +87,7 @@ const CounterAnimation = ({ stat }: { stat: any }) => {
 
 export const SocialProofSection = () => {
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
+    <section id="portfolio" className="py-24 bg-gray-50 relative overflow-hidden">
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         

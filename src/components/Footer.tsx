@@ -25,7 +25,7 @@ export const Footer = () => {
               <a href="mailto:contact@la-muse.org" className="w-10 h-10 sm:w-12 sm:h-12 glass bg-white/10 rounded flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a href="tel:080-1497-6650" className="w-10 h-10 sm:w-12 sm:h-12 glass bg-white/10 rounded flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110">
+              <a href="tel:080-2165-1838" className="w-10 h-10 sm:w-12 sm:h-12 glass bg-white/10 rounded flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
@@ -53,7 +53,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                <p className="text-sm sm:text-base">080-1497-6650</p>
+                <p className="text-sm sm:text-base">080-2165-1838</p>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />

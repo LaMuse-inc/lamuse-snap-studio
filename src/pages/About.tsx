@@ -122,7 +122,7 @@ export const About = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">電話番号</h3>
-                    <p className="text-gray-700">080-1497-6650</p>
+                    <p className="text-gray-700">080-2165-1838</p>
                   </div>
                 </div>
 
