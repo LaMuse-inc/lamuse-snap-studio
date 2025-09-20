@@ -160,7 +160,6 @@ export const About = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">電話番号</h3>
                     <p className="text-gray-700">080-2165-1838</p>
-                    <p className="text-sm text-gray-500 mt-1">代表直通</p>
                   </div>
                 </div>
 
