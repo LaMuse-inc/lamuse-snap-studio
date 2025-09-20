@@ -9,6 +9,7 @@ export const Navigation = () => {
   const navigationItems = [
     { href: "#services", label: "サービス" },
     { href: "#portfolio", label: "実績" },
+    { href: "/about", label: "会社概要" },
     { href: "#contact", label: "お問い合わせ" },
   ];
 
